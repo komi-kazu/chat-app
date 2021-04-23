@@ -11,21 +11,7 @@
   </div>
 </div>
 <div class="main-chat">
-  <div class="chat-box">
-    <div class="chat-name-create_at">
-      <div class="chat-name">
-        Tom
-      </div>
-      <div class="chat-create_at">
-        2020/3/31(Wed) 12:43
-      </div>
-    </div>
-    <div class="chat-text">
-      <div class="chat-text-content">
-        おはよう
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
   <div class="form-input">
